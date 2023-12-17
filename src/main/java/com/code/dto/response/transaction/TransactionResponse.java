@@ -1,6 +1,8 @@
 package com.code.dto.response.transaction;
 
 import com.code.model.TransactionType;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -15,12 +17,15 @@ public class TransactionResponse {
 
     Long transactionId;
 
+    @Enumerated(EnumType.STRING)
     TransactionType transactionType;
 
-    LocalDateTime transactionDate;
+    private Double amount;
 
-    Double amount;
+    private String senderName;
 
-    String description;
+    private String receiverName;
+
+    private String description;
 
 }

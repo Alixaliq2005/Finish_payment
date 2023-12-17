@@ -22,13 +22,12 @@ public class Transaction {
     private Long transactionId;
     
     private TransactionType transactionType;
-    
-    @CreatedDate
-    @CreationTimestamp
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime transactionDate;
-    
+
     private Double amount;
+
+    private String senderName;
+
+    private String receiverName;
     
 	private String description;
     
@@ -37,7 +36,7 @@ public class Transaction {
     @Override
 	public String toString() {
 		return "Transaction [transactionId=" + transactionId + ", transactionType=" + transactionType
-				+ ", transactionDate=" + transactionDate + ", amount=" + amount + ", description=" + description
+				+ ", amount=" + amount + ", description=" + description
 				+ ", walletId=" + walletId + "]";
 	}
 }

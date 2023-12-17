@@ -6,7 +6,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
-import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -27,8 +26,6 @@ public class BillPayment {
 	private TransactionType transactionType;
 
 	private Double amount;
-
-	private LocalDateTime time;
 
 	private Long walletId;
 
