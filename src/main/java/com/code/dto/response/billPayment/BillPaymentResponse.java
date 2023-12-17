@@ -23,6 +23,4 @@ public class BillPaymentResponse {
     private Double amount;
 
     private LocalDateTime time;
-
-    private Long walletId;
 }
